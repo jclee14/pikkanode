@@ -1,0 +1,46 @@
+<div id="pikka-img-container">
+    <img id="pikka-img" src="/images/<%= imgData.id%>" alt="image-id=<%= imgData.id%>">
+    <div id="pikkaImg-data-container">
+        <div id="pikka-owner">
+            <h3>User.<%= imgData.created_by%></h3>
+        </div>
+        <div id="comment-section">
+            <div id="caption-container">
+                <h4>User.<%= imgData.created_by%>:&nbsp&nbsp</h4>
+                <p><%= imgData.caption %></p>
+                <p class="comment-date">Posted on <%= imgData.created_at %></p>
+            </div>
+            <% if(commentData.length > 0) {%>
+                <% for(let i = 0 ; i < commentData.length ; i++) { %>
+                    <div class="comment-container">
+                        <h4>User.<%= commentData[i].created_by %>:&nbsp&nbsp</h4>
+                        <p><%= commentData[i].text %></p>
+                        <p class="comment-date">- <%= commentData[i].created_at %></p>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+        <div id="like-container">
+            <a href="/pikka/<%= imgData.id %>/like" class="like-button"><span class="glyphicon glyphicon-heart-empty"></span></a>
+            <p><strong><%= likeAmount %></strong> Likes</p>
+        </div>
+        <div id="comment-form">
+            <form method="POST">
+                <textarea name="comment" placeholder="Add a comment..." class="message"></textarea>
+                <input type="submit" name="Submit" value="Post">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('#pikkaImg-data-container').css("max-height", $('#pikka-img').height());
+
+        if(<%= isLike %>) {
+            $('.glyphicon').removeClass('glyphicon-heart-empty').addClass('glyphicon-heart');
+        } else {
+            $('.glyphicon').removeClass('glyphicon-heart').addClass('glyphicon-heart-empty');
+        }
+    });
+</script>

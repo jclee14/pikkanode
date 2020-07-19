@@ -1,0 +1,20 @@
+<div id="result-notice">
+    <% if(task == 'signin') { %>
+        <h2 class="approve-style-font"><%= message %></h2>
+        <a href="/" class="approve-link">< Go to homepage</a>
+        <div style="clear: both;"></div>
+        <img src="/images/element/login_success.jpg" alt="Login Success Cover">
+    <% } else if(task == 'signup') { %>
+        <h2 class="approve-style-font"><%= message %></h2>
+        <a href="/signin" class="approve-link">< Sign in now!</a>
+        <div style="clear: both;"></div>
+        <img src="/images/element/welcome_sign.jpg" alt="Sign up success Cover">
+    <% } else if(task == 'authSignIn') { %>
+        <h2 class="caution-style-font"><%= message %></h2>
+        <span>Already have an account? </span><a href="/signin">Sign in</a>
+        <span>&nbsp|&nbsp</span>
+        <span>No account? </span><a href="/signup">Create One</a>
+        <div style="clear: both;"></div>
+        <img src="/images/element/please_login.jpg" alt="Login Notice">
+    <% } %>
+</div>

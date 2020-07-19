@@ -1,0 +1,22 @@
+<div id="header-container">
+    <div id="pikka-name">
+        <a href="/"><h1>PikkaNode V.1</h1></a>
+    </div>
+    <% if(!user) { %>
+        <div id="navbar">
+            <a href="/signin">Sign In</a>
+            <span>&nbsp|&nbsp</span>
+            <a href="/signup">Sign Up</a>
+            <span>&nbsp|&nbsp</span>
+            <a href="/create">Upload</a>
+        </div>
+    <% } else { %>
+        <div id="user-panal">
+            <h5>User: <%= user %></h5>
+            <a href="/create">Upload</a>
+            <span>&nbsp|&nbsp</span>
+            <a href="/signout">Log out</a>
+        </div>
+    <% } %>
+</div>
+<div style="clear: both;"></div>

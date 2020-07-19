@@ -1,0 +1,45 @@
+<div id="search-container">
+    <form method="POST">
+        <span class="glyphicon glyphicon-search"></span>
+        <input type="text" name="caption" placeholder="Search by caption!">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<% if(data.length == 0) { %>
+    <div id="result-notice" class="caution-style-font">
+        <h2>Result Not Found!</h2>
+        <img src="/images/element/result_not_found.jpg" alt="Image Not Found!">
+    </div>
+<% } %>
+
+<div id="gallery-container">
+    <% for(let i = 0 ; i < data.length ; i++) { %>
+        <div class="gallery">
+            <a href="/pikka/<%= data[i].id %>"><img src="images/<%= data[i].id %>" alt="<%= data[i].id %>"></a>
+            <div class="detail-container">
+                <h4>User.<%= data[i].created_by %></h4>
+                <div class="icon-set">
+                    <div class="icon-container">
+                        <span class="glyphicon glyphicon-heart"></span>
+                        <h5><%= like[data[i].id] %></h5>
+                    </div>
+                    <div class="icon-container">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <h5><%= comment[data[i].id] %></h5>
+                    </div>
+                </div>
+                <br style="clear: both;" />
+                <h5 class="upload-date"><%= data[i].created_at %></h5>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<script>
+    $(document).ready(function(){
+        if(<%= data.length %> % 3 !== 0) {
+            $('.gallery:last-child').css('margin-right','0');
+        }
+    });
+</script>

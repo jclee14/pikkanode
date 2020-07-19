@@ -1,0 +1,14 @@
+<div id="signform-container">
+    <h2>Welcome Back.</h2>
+    <p class="signform-greeting">Sign in to explore our meaning of living,<br>share special moments, and interact with stories</p>
+    <% if(flash && flash.error) {%>
+        <p style="color: red"><%= flash.error %></p>
+    <% } %>
+    <form method="POST">
+        <input type="text" name="email" placeholder="Email"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="submit" value="Sign In">
+    </form>
+    <span>No account? </span><a href="/signup">Create One</a>
+</div>
+<div style="clear: both;"></div>

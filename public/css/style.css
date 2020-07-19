@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    background-color: #fafafa;
+}
+
+#header-container {
+    display: flex;
+    background-color: white;
+    border-bottom: 1px #CEF1EF solid;
+    height: 100px;
+    padding: 0 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pikka-name h1 {
+    margin: 0;
+    color: purple;
+}
+
+#user-panal {
+    text-align: right;
+}
+
+#user-panal h5 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/*-----------------Sign In/Up---------------------*/
+#signform-container {
+    margin-top: 7%;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+#signform-container h2 {
+    font-size: 40px;
+    color: purple;
+}
+
+.signform-greeting {
+    margin: 20px 0 30px;
+}
+
+#signform-container input[type=text], #signform-container input[type=password] {
+    width: 30%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+}
+
+#signform-container input[type=submit] {
+    width: 30%;
+    height: 40px;
+    margin: 10px 0 20px;
+}
+
+#signform-container h2 {
+    color: purple;
+}
+
+/*---------------Upload-------------------*/
+
+.upload-container {
+    margin-top: 5%;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.upload-container h2 {
+    font-size: 40px;
+    color: purple;
+}
+
+.upload-container input[type=file] {
+    display: inline;
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.upload-container textarea {
+    margin-top: 10px;
+    width: 40%;
+    padding: 20px;
+}
+
+.upload-container button {
+    width: 40%;
+    height: 40px;
+}
+
+/*------------- HomePage -------------*/
+
+#search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.glyphicon-search {
+    color: grey;
+    margin-right: 5px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+}
+:-ms-input-placeholder {  
+    text-align: center; 
+}
+
+#gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 0 0 0;
+}
+
+.gallery {
+    background-color: #f7f7f7;
+    margin-bottom: 2vw;
+}
+
+.gallery:not(:nth-child(3n)) {
+    margin-right: 2vw;
+}
+
+.gallery img {
+    object-fit: cover;
+    width: 24vw;
+    height: 24vw;
+}
+
+.detail-container {
+    padding: 10px;
+}
+
+.detail-container h4 {
+    float: left;
+    margin: 0;
+    font-size: 20px;
+}
+
+.icon-container {
+    float: right;
+    margin-left: 10px;
+}
+
+.icon-container span {
+    font-size: 1.8vw !important;
+    float: left;
+    color: purple;
+}
+
+.icon-container h5 {
+    margin: 0;
+    float: left;
+    font-size: 1.5vw;
+    margin-left: 5px;
+}
+
+.upload-date {
+    margin: 0;
+}
+
+/*------------------Pikka Page---------------------*/
+#pikka-img-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+#pikka-img-container img {
+    width: 45%;
+    height: auto;
+    float: left;
+}
+
+#pikkaImg-data-container {
+    width: 25%;
+    max-width: 300px;
+    max-height: 200px;
+    background-color: white;
+    position: relative;
+    border: 1px #CEF1EF solid;
+}
+
+#pikka-owner {
+    border-bottom: 1px #CEF1EF solid;
+    padding: 0 20px;
+    height: 15%;
+    max-height: 50px;
+}
+
+#pikka-owner h3 {
+    margin: 0;
+    padding-top: 7%;
+}
+
+#comment-section {
+    overflow-y: auto;
+    height: 60%;
+    padding: 0 20px;
+    border-bottom: 1px #CEF1EF solid;
+}
+
+#caption-container {
+    overflow: hidden;
+    padding: 25px 0 10px;
+}
+
+.comment-container {
+    overflow: hidden;
+    padding: 10px 0 10px;
+}
+
+#caption-container h4, .comment-container h4 {
+    float: left;
+    margin: 0;
+}
+
+#caption-container p, .comment-container p {
+    margin: 0;
+}
+
+.comment-date {
+    color: #999999;
+    font-size: 13px;
+    font-style: italic;
+    padding-top: 5px;
+}
+
+#comment-form {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    border-top: 1px #CEF1EF solid;
+/*     padding-left: 5%;
+    padding-top: 3%; */
+}
+
+#comment-form form {
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+}
+
+#comment-form textarea {
+    width: 80%;
+    border: none;
+    padding: 0;
+    height: 100%;
+    float: left;
+}
+
+.message::-webkit-input-placeholder {padding-top: 7%;}
+.message:-moz-placeholder { /* Firefox 18- */padding-top: 7%;}
+.message::-moz-placeholder {  /* Firefox 19+ */padding-top: 7%;}
+.message:-ms-input-placeholder {padding-top: 7%;}
+
+#comment-form input {
+    height: 100%;
+    width: 20%;
+}
+
+#like-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 15%;
+    width: 100%;
+    height: 10%;
+}
+
+#like-container p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.like-button {
+    font-size: 25px;
+    padding: 0 10px 0 10px;
+}
+
+.like-button .glyphicon-heart-empty {
+    color: black;
+}
+
+.like-button .glyphicon-heart-empty:hover {
+    color: red;
+}
+
+.like-button .glyphicon-heart {
+    color: red;
+}
+
+#result-notice {
+    text-align: center;
+}
+
+#result-notice h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#result-notice img {
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.approve-style-font {
+    color: blue;
+}
+
+.caution-style-font {
+    color: red;
+}
+
+.approve-link {
+    font-size: 20px;
+    color: grey;
+}
+
+.approve-link:hover {
+    color: blue;
+}
+
+/*-------------- Footer --------------*/
+#footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+#footer-container h5, #footer-container span {
+    float: left;
+    margin: 0;
+    color: grey;
+}
+
+#footer-container span {
+    font-size: 20px;
+}
