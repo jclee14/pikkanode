@@ -19,7 +19,7 @@
   },
   "homepage": "https://gitlab.com/jc.14/pikkanode-v1#readme",
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "fs-extra": "^8.1.0",
     "koa": "^2.7.0",
     "koa-body": "^4.1.0",
